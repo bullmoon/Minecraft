@@ -18,6 +18,6 @@ pos = mc.player.getPos()
 
 def build_stack():
   mc.postToChat("Clear terrain 10 block to each side and high 10 blocks")
-  mc.setBlocks(pos.x - 10, pos.y, pos.z -10, pos.x + 10, pos.y +10, pos.z + 10, air)
+  mc.setBlocks(pos.x - 10, pos.y, pos.z -10, pos.x + 10, pos.y +20, pos.z + 50, air)
 
 build_stack()
