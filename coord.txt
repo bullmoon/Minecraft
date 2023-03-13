@@ -1,2 +1,11 @@
 Thanks to 
 https://vk.com/@pylounge-sozdanie-skriptov-dlya-servera-minecraft-s-pomoschu-python
+'''
+В версии Minecraft для Raspberry PI координаты относятся к точке появления игрока, и это то, что RaspberryJuice использует по умолчанию. На сервере Minecraft их нет, они абсолютные, поэтому мы хотим, чтобы API соответствовал. Отредактируйте
+
+minecraft-server/plugins/RaspberryJuice/config.yml
+
+и измените местоположение на чтение:
+
+location: ABSOLUTE
+'''
