@@ -9,12 +9,28 @@ import datetime
 import math
 
 ### Variables
-# Size data
-size  = 6 # Block side
-
-time.sleep(3)
 pos = mc.player.getPos()
+cl = pos.y + 1
 
-for i in range(80):
-    mc.setBlock(pos.x - i, pos.y, pos.z, i)
-    i += 1
+
+def testDoors():
+    mc.setBlocks(pos.x + 3, cl, pos.z - 1, pos.x, 42)
+    mc.setBlock(pos.x + 3, cl, pos.z + 1, 42)
+    mc.setBlock(pos.x + 3, cl, pos.z, 324)
+    mc.setBlock(pos.x + 3, cl + 1, pos.z, 324)
+
+def install_door():
+    time.sleep(1)
+    for y in (cl, cl + 1):
+        mc.setBlock(pos.x + 3, y, pos.z - 2, block.GRASS.id)
+    time.sleep(1)
+    for y in (cl, cl + 1):
+        mc.setBlock(pos.x + 3, y, pos.z, block.GRASS.id)
+    time.sleep(1)
+    mc.setBlock(pos.x + 3, cl + 1, pos.z - 1, block.DOOR_WOOD.id, 8)  # Устанавливаем верхнюю часть двери
+    time.sleep(1)
+    mc.setBlock(pos.x + 3, cl, pos.z - 1, block.DOOR_WOOD.id, 0)  # Устанавливаем нижнюю часть двери
+
+#sources()
+#testDoors()
+install_door()

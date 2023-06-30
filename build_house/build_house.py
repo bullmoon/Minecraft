@@ -21,7 +21,7 @@ length = 6 # lenght of house
 
 # Start code
 time.sleep(3)
-mc.player.setPos(0.0, -58.0, 120.0)
+#mc.player.setPos(0.0, -58.0, 120.0)
 pos = mc.player.getPos()
 
 def clearTerrain():
